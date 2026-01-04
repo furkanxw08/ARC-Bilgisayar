@@ -1,0 +1,123 @@
+body,
+html {
+    margin: 0px;
+    background-color: #E2E0C8;
+    font-family: "Zalando Sans Expanded", sans-serif;
+    scroll-behavior: smooth;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: #5C7285;
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    float: left;
+    flex-direction: row;
+    align-items: center;
+}
+
+#headera {
+    color: black;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+#headera:hover {
+    color: #E2E0C8;
+    text-decoration: underline;
+}
+
+ul {
+    float: right;
+}
+
+li {
+    display: inline;
+}
+
+article {
+    width: 100%;
+    height: 750px;
+    margin-top: 100px;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #A7B49E;
+}
+
+#ortayazi {
+    background: linear-gradient(90deg, #E2E0C8, #818C78, #5C7285);
+    background-size: 400% 400%;
+    font-size: 150px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 10s ease infinite;
+
+}
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; transform: scale(0.8);}
+  50% { background-position: 100% 50%; transform: scale(1.1);}
+  100% { background-position: 0% 50%; transform: scale(0.8);}
+}
+.yönlendirme{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    background-color: #818C78;
+}
+ @media (max-width: 768px) {
+    #yönlendirmefoto{
+        flex-direction: column;
+    }
+    .yönlendirme{
+        float: left;
+        height: 1500px;
+        width: 100%;
+        flex-direction: column;
+        
+    }
+    
+    #ortayazi{
+        display: none;
+    }
+    article{
+        display: none;
+    }
+ }
+
+#yönlendirmefoto{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    border-radius: 10px;
+    margin-left: 20px;
+    opacity: 0.3;
+    transition: 0.3s ease-in-out;
+}
+#yh1{
+    transition: 0.3s ease;
+}
+
+#yh1:hover{
+    filter: blur(0px);
+    transform: scale(1);
+    transition: 0.3s ease;
+}
+
+.yönlendirme:hover > h1:not(:hover){
+    filter: blur(2px);
+    transform: scale(0.9);
+    transition: 0.3s ease;
+}
+footer{
+    width: 100%;
+    height: 250px;
+    float: left;
+    
+}
